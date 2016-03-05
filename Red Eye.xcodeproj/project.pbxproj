@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEE1849A1C8B5A2400CDA459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184991C8B5A2400CDA459 /* AppDelegate.swift */; };
+		DEE1849C1C8B5A2400CDA459 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE1849B1C8B5A2400CDA459 /* ViewController.swift */; };
+		DEE1849F1C8B5A2400CDA459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE1849D1C8B5A2400CDA459 /* Main.storyboard */; };
+		DEE184A11C8B5A2400CDA459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE184A01C8B5A2400CDA459 /* Assets.xcassets */; };
+		DEE184A41C8B5A2400CDA459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE184A21C8B5A2400CDA459 /* LaunchScreen.storyboard */; };
+		DEE184AF1C8B5A2400CDA459 /* Red_EyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184AE1C8B5A2400CDA459 /* Red_EyeTests.swift */; };
+		DEE184BA1C8B5A2400CDA459 /* Red_EyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184B91C8B5A2400CDA459 /* Red_EyeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEE184AB1C8B5A2400CDA459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEE1848E1C8B5A2400CDA459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEE184951C8B5A2400CDA459;
+			remoteInfo = "Red Eye";
+		};
+		DEE184B61C8B5A2400CDA459 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEE1848E1C8B5A2400CDA459 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEE184951C8B5A2400CDA459;
+			remoteInfo = "Red Eye";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DEE184961C8B5A2400CDA459 /* Red Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Red Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE184991C8B5A2400CDA459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEE1849B1C8B5A2400CDA459 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEE1849E1C8B5A2400CDA459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEE184A01C8B5A2400CDA459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEE184A31C8B5A2400CDA459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEE184A51C8B5A2400CDA459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE184AA1C8B5A2400CDA459 /* Red EyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red EyeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE184AE1C8B5A2400CDA459 /* Red_EyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_EyeTests.swift; sourceTree = "<group>"; };
+		DEE184B01C8B5A2400CDA459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE184B51C8B5A2400CDA459 /* Red EyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Red EyeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE184B91C8B5A2400CDA459 /* Red_EyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_EyeUITests.swift; sourceTree = "<group>"; };
+		DEE184BB1C8B5A2400CDA459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEE184931C8B5A2400CDA459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184A71C8B5A2400CDA459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184B21C8B5A2400CDA459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEE1848D1C8B5A2400CDA459 = {
+			isa = PBXGroup;
+			children = (
+				DEE184981C8B5A2400CDA459 /* Red Eye */,
+				DEE184AD1C8B5A2400CDA459 /* Red EyeTests */,
+				DEE184B81C8B5A2400CDA459 /* Red EyeUITests */,
+				DEE184971C8B5A2400CDA459 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEE184971C8B5A2400CDA459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEE184961C8B5A2400CDA459 /* Red Eye.app */,
+				DEE184AA1C8B5A2400CDA459 /* Red EyeTests.xctest */,
+				DEE184B51C8B5A2400CDA459 /* Red EyeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEE184981C8B5A2400CDA459 /* Red Eye */ = {
+			isa = PBXGroup;
+			children = (
+				DEE184991C8B5A2400CDA459 /* AppDelegate.swift */,
+				DEE1849B1C8B5A2400CDA459 /* ViewController.swift */,
+				DEE1849D1C8B5A2400CDA459 /* Main.storyboard */,
+				DEE184A01C8B5A2400CDA459 /* Assets.xcassets */,
+				DEE184A21C8B5A2400CDA459 /* LaunchScreen.storyboard */,
+				DEE184A51C8B5A2400CDA459 /* Info.plist */,
+			);
+			path = "Red Eye";
+			sourceTree = "<group>";
+		};
+		DEE184AD1C8B5A2400CDA459 /* Red EyeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEE184AE1C8B5A2400CDA459 /* Red_EyeTests.swift */,
+				DEE184B01C8B5A2400CDA459 /* Info.plist */,
+			);
+			path = "Red EyeTests";
+			sourceTree = "<group>";
+		};
+		DEE184B81C8B5A2400CDA459 /* Red EyeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DEE184B91C8B5A2400CDA459 /* Red_EyeUITests.swift */,
+				DEE184BB1C8B5A2400CDA459 /* Info.plist */,
+			);
+			path = "Red EyeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEE184951C8B5A2400CDA459 /* Red Eye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE184BE1C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red Eye" */;
+			buildPhases = (
+				DEE184921C8B5A2400CDA459 /* Sources */,
+				DEE184931C8B5A2400CDA459 /* Frameworks */,
+				DEE184941C8B5A2400CDA459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Red Eye";
+			productName = "Red Eye";
+			productReference = DEE184961C8B5A2400CDA459 /* Red Eye.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEE184A91C8B5A2400CDA459 /* Red EyeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE184C11C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red EyeTests" */;
+			buildPhases = (
+				DEE184A61C8B5A2400CDA459 /* Sources */,
+				DEE184A71C8B5A2400CDA459 /* Frameworks */,
+				DEE184A81C8B5A2400CDA459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEE184AC1C8B5A2400CDA459 /* PBXTargetDependency */,
+			);
+			name = "Red EyeTests";
+			productName = "Red EyeTests";
+			productReference = DEE184AA1C8B5A2400CDA459 /* Red EyeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DEE184B41C8B5A2400CDA459 /* Red EyeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE184C41C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red EyeUITests" */;
+			buildPhases = (
+				DEE184B11C8B5A2400CDA459 /* Sources */,
+				DEE184B21C8B5A2400CDA459 /* Frameworks */,
+				DEE184B31C8B5A2400CDA459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEE184B71C8B5A2400CDA459 /* PBXTargetDependency */,
+			);
+			name = "Red EyeUITests";
+			productName = "Red EyeUITests";
+			productReference = DEE184B51C8B5A2400CDA459 /* Red EyeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEE1848E1C8B5A2400CDA459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Colin Thompson";
+				TargetAttributes = {
+					DEE184951C8B5A2400CDA459 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U98VLVYM5E;
+					};
+					DEE184A91C8B5A2400CDA459 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U98VLVYM5E;
+						TestTargetID = DEE184951C8B5A2400CDA459;
+					};
+					DEE184B41C8B5A2400CDA459 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U98VLVYM5E;
+						TestTargetID = DEE184951C8B5A2400CDA459;
+					};
+				};
+			};
+			buildConfigurationList = DEE184911C8B5A2400CDA459 /* Build configuration list for PBXProject "Red Eye" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEE1848D1C8B5A2400CDA459;
+			productRefGroup = DEE184971C8B5A2400CDA459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEE184951C8B5A2400CDA459 /* Red Eye */,
+				DEE184A91C8B5A2400CDA459 /* Red EyeTests */,
+				DEE184B41C8B5A2400CDA459 /* Red EyeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEE184941C8B5A2400CDA459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE184A41C8B5A2400CDA459 /* LaunchScreen.storyboard in Resources */,
+				DEE184A11C8B5A2400CDA459 /* Assets.xcassets in Resources */,
+				DEE1849F1C8B5A2400CDA459 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184A81C8B5A2400CDA459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184B31C8B5A2400CDA459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEE184921C8B5A2400CDA459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE1849C1C8B5A2400CDA459 /* ViewController.swift in Sources */,
+				DEE1849A1C8B5A2400CDA459 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184A61C8B5A2400CDA459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE184AF1C8B5A2400CDA459 /* Red_EyeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE184B11C8B5A2400CDA459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE184BA1C8B5A2400CDA459 /* Red_EyeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEE184AC1C8B5A2400CDA459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEE184951C8B5A2400CDA459 /* Red Eye */;
+			targetProxy = DEE184AB1C8B5A2400CDA459 /* PBXContainerItemProxy */;
+		};
+		DEE184B71C8B5A2400CDA459 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEE184951C8B5A2400CDA459 /* Red Eye */;
+			targetProxy = DEE184B61C8B5A2400CDA459 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEE1849D1C8B5A2400CDA459 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEE1849E1C8B5A2400CDA459 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEE184A21C8B5A2400CDA459 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEE184A31C8B5A2400CDA459 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEE184BC1C8B5A2400CDA459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEE184BD1C8B5A2400CDA459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEE184BF1C8B5A2400CDA459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Red Eye/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-Eye";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEE184C01C8B5A2400CDA459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Red Eye/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-Eye";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DEE184C21C8B5A2400CDA459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Red EyeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-EyeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Eye.app/Red Eye";
+			};
+			name = Debug;
+		};
+		DEE184C31C8B5A2400CDA459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Red EyeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-EyeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Red Eye.app/Red Eye";
+			};
+			name = Release;
+		};
+		DEE184C51C8B5A2400CDA459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Red EyeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-EyeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Red Eye";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DEE184C61C8B5A2400CDA459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Red EyeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ColinThompson.Red-EyeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Red Eye";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEE184911C8B5A2400CDA459 /* Build configuration list for PBXProject "Red Eye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE184BC1C8B5A2400CDA459 /* Debug */,
+				DEE184BD1C8B5A2400CDA459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEE184BE1C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red Eye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE184BF1C8B5A2400CDA459 /* Debug */,
+				DEE184C01C8B5A2400CDA459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DEE184C11C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red EyeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE184C21C8B5A2400CDA459 /* Debug */,
+				DEE184C31C8B5A2400CDA459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DEE184C41C8B5A2400CDA459 /* Build configuration list for PBXNativeTarget "Red EyeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE184C51C8B5A2400CDA459 /* Debug */,
+				DEE184C61C8B5A2400CDA459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEE1848E1C8B5A2400CDA459 /* Project object */;
+}
