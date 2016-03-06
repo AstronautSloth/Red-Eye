@@ -15,6 +15,7 @@
 		DEE184AF1C8B5A2400CDA459 /* Red_EyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184AE1C8B5A2400CDA459 /* Red_EyeTests.swift */; };
 		DEE184BA1C8B5A2400CDA459 /* Red_EyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184B91C8B5A2400CDA459 /* Red_EyeUITests.swift */; };
 		DEE184CC1C8B994C00CDA459 /* PhotoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE184CB1C8B994C00CDA459 /* PhotoButton.png */; };
+		DEE184CE1C8BD51300CDA459 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE184CD1C8BD51300CDA459 /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DEE184B91C8B5A2400CDA459 /* Red_EyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Red_EyeUITests.swift; sourceTree = "<group>"; };
 		DEE184BB1C8B5A2400CDA459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEE184CB1C8B994C00CDA459 /* PhotoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoButton.png; sourceTree = SOURCE_ROOT; };
+		DEE184CD1C8BD51300CDA459 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				DEE184991C8B5A2400CDA459 /* AppDelegate.swift */,
 				DEE1849B1C8B5A2400CDA459 /* ViewController.swift */,
+				DEE184CD1C8BD51300CDA459 /* PreviewViewController.swift */,
 				DEE1849D1C8B5A2400CDA459 /* Main.storyboard */,
 				DEE184A01C8B5A2400CDA459 /* Assets.xcassets */,
 				DEE184A21C8B5A2400CDA459 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				DEE1849C1C8B5A2400CDA459 /* ViewController.swift in Sources */,
 				DEE1849A1C8B5A2400CDA459 /* AppDelegate.swift in Sources */,
+				DEE184CE1C8BD51300CDA459 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

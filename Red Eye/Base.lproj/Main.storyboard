@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Red_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Camera" id="BYZ-38-t0r" customClass="ViewController" customModule="Red_Eye" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,6 +22,9 @@
                                 <rect key="frame" x="265" y="516" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" backgroundImage="PhotoButton.png"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYg-7Y-XNH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,7 +37,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="337"/>
+            <point key="canvasLocation" x="241" y="317"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="gmt-yi-Wmz">
+            <objects>
+                <viewController storyboardIdentifier="Preview" modalTransitionStyle="flipHorizontal" modalPresentationStyle="currentContext" id="Fg0-pv-6gX" customClass="PreviewViewController" customModule="Red_Eye" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="odJ-Vk-Z7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="htI-7a-9Jq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="972-kL-yLh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UI-dM-xnl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-tv-vKr">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Delete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-eI-hjW">
+                                <rect key="frame" x="20" y="550" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="gn1-c0-C1r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Save"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gn1-c0-C1r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gn1-c0-C1r"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hF4-eI-hjW" firstAttribute="centerY" secondItem="fvf-tv-vKr" secondAttribute="centerY" id="0I5-bm-cNM"/>
+                            <constraint firstItem="0UI-dM-xnl" firstAttribute="leading" secondItem="972-kL-yLh" secondAttribute="leadingMargin" constant="-21" id="3yo-dx-chV"/>
+                            <constraint firstItem="0UI-dM-xnl" firstAttribute="top" secondItem="odJ-Vk-Z7Y" secondAttribute="bottom" id="51L-MN-0qV"/>
+                            <constraint firstItem="htI-7a-9Jq" firstAttribute="top" secondItem="fvf-tv-vKr" secondAttribute="bottom" constant="34" id="Eo8-GD-bux"/>
+                            <constraint firstItem="0UI-dM-xnl" firstAttribute="centerX" secondItem="972-kL-yLh" secondAttribute="centerX" id="FSS-Ku-vID"/>
+                            <constraint firstItem="0UI-dM-xnl" firstAttribute="bottom" secondItem="htI-7a-9Jq" secondAttribute="top" id="N0e-fm-3sX"/>
+                            <constraint firstItem="htI-7a-9Jq" firstAttribute="top" secondItem="hF4-eI-hjW" secondAttribute="bottom" constant="39" id="frF-dy-tkZ"/>
+                            <constraint firstItem="hF4-eI-hjW" firstAttribute="leading" secondItem="972-kL-yLh" secondAttribute="leadingMargin" id="h2M-wt-8DS"/>
+                            <constraint firstItem="fvf-tv-vKr" firstAttribute="trailing" secondItem="972-kL-yLh" secondAttribute="trailingMargin" id="jrT-Sz-Trd"/>
+                            <constraint firstItem="fvf-tv-vKr" firstAttribute="top" secondItem="odJ-Vk-Z7Y" secondAttribute="bottom" constant="527" id="zri-8s-jsD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0UI-dM-xnl"/>
+                                <exclude reference="fvf-tv-vKr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3yo-dx-chV"/>
+                                <exclude reference="51L-MN-0qV"/>
+                                <exclude reference="FSS-Ku-vID"/>
+                                <exclude reference="N0e-fm-3sX"/>
+                                <exclude reference="0I5-bm-cNM"/>
+                                <exclude reference="h2M-wt-8DS"/>
+                                <exclude reference="Eo8-GD-bux"/>
+                                <exclude reference="frF-dy-tkZ"/>
+                                <exclude reference="jrT-Sz-Trd"/>
+                                <exclude reference="zri-8s-jsD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0UI-dM-xnl"/>
+                                <include reference="fvf-tv-vKr"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3yo-dx-chV"/>
+                                <include reference="51L-MN-0qV"/>
+                                <include reference="FSS-Ku-vID"/>
+                                <include reference="N0e-fm-3sX"/>
+                                <include reference="0I5-bm-cNM"/>
+                                <include reference="h2M-wt-8DS"/>
+                                <include reference="Eo8-GD-bux"/>
+                                <include reference="frF-dy-tkZ"/>
+                                <include reference="jrT-Sz-Trd"/>
+                                <include reference="zri-8s-jsD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="delete" destination="fvf-tv-vKr" id="ubB-wb-tWZ"/>
+                        <outlet property="imageView" destination="0UI-dM-xnl" id="zjb-V4-2M3"/>
+                        <outlet property="save" destination="hF4-eI-hjW" id="iVj-T2-hHn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mk1-It-46C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="317"/>
         </scene>
     </scenes>
     <resources>
