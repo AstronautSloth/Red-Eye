@@ -58,6 +58,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="64" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="Fg0-pv-6gX" eventType="touchUpInside" id="Azq-KA-0bh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-eI-hjW">
                                 <rect key="frame" x="20" y="550" width="85" height="30"/>
@@ -76,6 +79,9 @@
                                         <include reference="gn1-c0-C1r"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="savePressed:" destination="Fg0-pv-6gX" eventType="touchUpInside" id="avM-X4-hW1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

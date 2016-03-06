@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+
+
 class ViewController: UIViewController {
     
     let captureSession = AVCaptureSession()
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         previewLayer.zPosition = -1
         
+        self.configureDevice()
         
         captureSession.startRunning()
     }
@@ -63,7 +66,7 @@ class ViewController: UIViewController {
                 NSLog("Failed device lock")
             }
             device.focusMode = .ContinuousAutoFocus
-            device.flashMode = .On
+            device.flashMode = .Off
             device.unlockForConfiguration()
         }
     }
@@ -88,8 +91,22 @@ class ViewController: UIViewController {
             }
         }
 
+        if self.captureDevice!.hasTorch {
+            do {
+                try self.captureDevice!.lockForConfiguration()
+                //self.captureDevice!.torchMode = .On
+                self.captureDevice!.flashMode = .On
+                self.captureDevice!.unlockForConfiguration()
+            }catch _ {
+                NSLog("Error locking device")
+            }
+        }
+        
         
         imageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection!, completionHandler: { (sampleBuffer, error) -> Void in
+            
+
+            
             let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
             let dataProvider = CGDataProviderCreateWithCFData(imageData)
             let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
@@ -98,10 +115,27 @@ class ViewController: UIViewController {
             self.imageView!.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
             
             
-            
             let previewVC = self.storyboard!.instantiateViewControllerWithIdentifier("Preview") as! PreviewViewController
             previewVC.toPass = self.imageView.image
+        
+            
+            
             self.presentViewController(previewVC, animated: true, completion: nil)
+            
+            let seconds = 1.0
+            let delay = seconds * Double(NSEC_PER_SEC)
+            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            
+            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                do {
+                    try self.captureDevice!.lockForConfiguration()
+                    //self.captureDevice!.torchMode = .Off
+                    self.captureDevice!.flashMode = .Off
+                    self.captureDevice?.unlockForConfiguration()
+                } catch _ {
+                    NSLog("Error locking device")
+                }
+            })
             
         })
         

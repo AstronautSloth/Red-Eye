@@ -24,6 +24,16 @@ class PreviewViewController: UIViewController {
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
     }
     
+    @IBAction func savePressed(sender: AnyObject) {
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, nil, nil)
+        let cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("Camera")
+        self.presentViewController(cameraVC!, animated: false, completion: nil)
+    }
+    
+    @IBAction func deletePressed(sender: AnyObject) {
+        let cameraVC = self.storyboard?.instantiateViewControllerWithIdentifier("Camera")
+        self.presentViewController(cameraVC!, animated: false, completion: nil)
+    }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
