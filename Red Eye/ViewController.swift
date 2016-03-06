@@ -12,15 +12,13 @@ import MobileCoreServices
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate {
     
-    //let captureSession = AVCaptureSession()
-    //var captureDevice : AVCaptureDevice?
+    let captureSession = AVCaptureSession()
+    var captureDevice : AVCaptureDevice?
     
-    @IBOutlet weak var imageView: UIImageView!
-    var newMedia : Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         let devices = AVCaptureDevice.devices()
         for device in devices{
@@ -32,12 +30,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
                     }
                 }
             }
-        }*/
+        }
         
         
         
     }
-    /*
+    
     func beginSession() {
         let err : NSError? = nil
         do {
@@ -62,27 +60,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
             device.flashMode = .On
             device.unlockForConfiguration()
         }
-    }*/
+    }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
 
-    
-    @IBAction func takePhoto(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
-            imagePicker.mediaTypes = [kUTTypeImage as NSString as String]
-            imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
-            
-            newMedia = true
-        }
-    }
-    
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
