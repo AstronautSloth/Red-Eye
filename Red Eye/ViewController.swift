@@ -8,9 +8,8 @@
 
 import UIKit
 import AVFoundation
-import MobileCoreServices
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate {
+class ViewController: UIViewController {
     
     let captureSession = AVCaptureSession()
     var captureDevice : AVCaptureDevice?
@@ -46,6 +45,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate {
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.view.layer.addSublayer(previewLayer)
         previewLayer?.frame = self.view.bounds
+
+        previewLayer.bounds = view.layer.bounds
+        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer.zPosition = -1
+        
+        
         captureSession.startRunning()
     }
     

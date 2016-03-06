@@ -17,23 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLo-35-Wsc">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="482"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-fJ-OSz">
-                                <rect key="frame" x="238" y="468" width="124" height="124"/>
-                                <state key="normal" image="PhotoButton.png" backgroundImage="PhotoButton.png"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" misplaced="YES" placeholderIntrinsicWidth="70" placeholderIntrinsicHeight="70" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg9-fJ-OSz">
+                                <rect key="frame" x="265" y="516" width="70" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" backgroundImage="PhotoButton.png"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lg9-fJ-OSz" secondAttribute="bottom" constant="15" id="Yi3-o6-shl"/>
                             <constraint firstItem="lg9-fJ-OSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJl-cL-Lrh"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="gLo-35-Wsc" id="i4l-cm-vjW"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
