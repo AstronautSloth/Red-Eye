@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
         let devices = AVCaptureDevice.devices()
-        for device in devices{
-            if device.hasMediaType(AVMediaTypeVideo){
-                if device.position == AVCaptureDevicePosition.Back {
+        for device in devices!{
+            if (device as AnyObject).hasMediaType(AVMediaTypeVideo){
+                if (device as AnyObject).position == AVCaptureDevicePosition.back {
                     captureDevice = device as? AVCaptureDevice
                     if captureDevice != nil {
                         beginSession()
@@ -46,12 +46,12 @@ class ViewController: UIViewController {
             NSLog("error \(err?.localizedDescription)")
         }
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.view.layer.addSublayer(previewLayer)
+        self.view.layer.addSublayer(previewLayer!)
         previewLayer?.frame = self.view.bounds
 
-        previewLayer.bounds = view.layer.bounds
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        previewLayer.zPosition = -1
+        previewLayer?.bounds = view.layer.bounds
+        previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        previewLayer?.zPosition = -1
         
         self.configureDevice()
         
@@ -65,17 +65,17 @@ class ViewController: UIViewController {
             }catch _ {
                 NSLog("Failed device lock")
             }
-            device.focusMode = .ContinuousAutoFocus
-            device.flashMode = .Off
+            device.focusMode = .continuousAutoFocus
+            device.flashMode = .off
             device.unlockForConfiguration()
         }
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 
-    @IBAction func takePhoto(sender: AnyObject) {
+    @IBAction func takePhoto(_ sender: AnyObject) {
         
         var videoConnection : AVCaptureConnection?
         let imageOutput = AVCaptureStillImageOutput()
@@ -83,8 +83,8 @@ class ViewController: UIViewController {
         captureSession.addOutput(imageOutput)
         
         for connection in imageOutput.connections {
-            for port in connection.inputPorts as Array {
-                if port.mediaType == AVMediaTypeVideo {
+            for port in (connection as AnyObject).inputPorts as Array {
+                if (port as AnyObject).mediaType == AVMediaTypeVideo {
                     videoConnection = connection as? AVCaptureConnection
                     break
                 }
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             do {
                 try self.captureDevice!.lockForConfiguration()
                 //self.captureDevice!.torchMode = .On
-                self.captureDevice!.flashMode = .On
+                self.captureDevice!.flashMode = .off
                 self.captureDevice!.unlockForConfiguration()
             }catch _ {
                 NSLog("Error locking device")
@@ -103,34 +103,34 @@ class ViewController: UIViewController {
         }
         
         
-        imageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection!, completionHandler: { (sampleBuffer, error) -> Void in
+        imageOutput.captureStillImageAsynchronously(from: videoConnection!, completionHandler: { (sampleBuffer, error) -> Void in
             
 
             
             let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-            let dataProvider = CGDataProviderCreateWithCFData(imageData)
-            let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
-            let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+            let dataProvider = CGDataProvider(data: imageData as! CFData)
+            let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+            let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
             self.imageView = UIImageView(image: image)
             self.imageView!.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
             
             
-            let previewVC = self.storyboard!.instantiateViewControllerWithIdentifier("Preview") as! PreviewViewController
+            let previewVC = self.storyboard!.instantiateViewController(withIdentifier: "Preview") as! PreviewViewController
             previewVC.toPass = self.imageView.image
         
             
             
-            self.presentViewController(previewVC, animated: true, completion: nil)
+            self.present(previewVC, animated: true, completion: nil)
             
             let seconds = 1.0
             let delay = seconds * Double(NSEC_PER_SEC)
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
             
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
                 do {
                     try self.captureDevice!.lockForConfiguration()
                     //self.captureDevice!.torchMode = .Off
-                    self.captureDevice!.flashMode = .Off
+                    self.captureDevice!.flashMode = .off
                     self.captureDevice?.unlockForConfiguration()
                 } catch _ {
                     NSLog("Error locking device")
